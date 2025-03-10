@@ -2,58 +2,9 @@
 
 This guide explains how to use Docker with this project, including both Makefile shortcuts and direct Docker commands.
 
-## Quick Start with Make Commands
-
-The project includes a Makefile for simplified operations. Here are the available commands:
-
-```bash
-make help      # Show all available make commands
-make build     # Build all Docker images
-make up        # Start all services in detached mode
-make down      # Stop all services
-make restart   # Restart all services
-make logs      # View logs from all services
-make shell     # Open backend shell
-make migrate   # Run database migrations
-make fixtures  # Generate and load fixtures
-make superuser # Create superuser
-make clean     # Remove all containers and volumes
-```
-
 ## Common Development Workflows
 
-### First Time Setup
-```bash
-# 1. Build all services
-make build
 
-# 2. Start all services
-make up
-
-# 3. Run database migrations
-make migrate
-
-# 4. Load initial data
-make fixtures
-
-# 5. Create admin user
-make superuser
-```
-
-### Daily Development
-```bash
-# Start services
-make up
-
-# View logs
-make logs
-
-# Access backend shell if needed
-make shell
-
-# Stop services when done
-make down
-```
 
 ## Detailed Docker Commands
 
@@ -210,14 +161,6 @@ docker-compose exec frontend npm [command]
    docker-compose logs -f
    ```
 
-2. **Database issues**
-   ```bash
-   # Reset database
-   make down
-   make up
-   make migrate
-   make fixtures
-   ```
 
 3. **Redis connection issues**
    ```bash
@@ -244,7 +187,5 @@ The project uses environment variables from `.env` file. Make sure this file exi
 
 ## Additional Notes
 
-- The `make` commands are shortcuts for commonly used Docker commands
 - Use `docker-compose ps` to check the status of your services
 - Use `docker-compose logs -f [service]` to debug specific services
-- Always use `make down` before switching branches or making major changes 
