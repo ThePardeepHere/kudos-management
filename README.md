@@ -84,8 +84,42 @@ A modern web application for managing and distributing kudos within an organizat
    # Create superuser
    python manage.py createsuperuser
    ```
+4 **Sample User Details**:
+After loading the fixtures, the following organization and user details will be available:  
 
-4. **Frontend Setup**:
+## **Organization: Mitratech**  
+
+### **Users:**  
+
+#### **1. John Doe (Organization Owner)**  
+- **Username:** `john@mitratech.com`  
+- **First Name:** John  
+- **Last Name:** Doe  
+- **Group:** `org_owner` (Organization Owner)  
+- **Password:** `password123`  
+
+#### **2. Jane Smith (Organization Member)**  
+- **Username:** `jane@mitratech.com`  
+- **First Name:** Jane  
+- **Last Name:** Smith  
+- **Group:** `org_member` (Organization Member)  
+- **Password:** `password123`  
+
+#### **3. Bob Wilson (Organization Member)**  
+- **Username:** `bob@mitratech.com`  
+- **First Name:** Bob  
+- **Last Name:** Wilson  
+- **Group:** `org_member` (Organization Member)  
+- **Password:** `password123`  
+
+#### **4. Alice Brown (Organization Member)**  
+- **Username:** `alice@mitratech.com`  
+- **First Name:** Alice  
+- **Last Name:** Brown  
+- **Group:** `org_member` (Organization Member)  
+- **Password:** `password123`  
+
+5. **Frontend Setup**:
    ```powershell
    cd frontend
    npm install
